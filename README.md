@@ -66,6 +66,22 @@ Install the "data.table" package
   
 Make sure your "UCI HAR Dataset" is in your working directory or be prepard to change the file paths.
 
+## Study design and data processing
+The run_analysis.R script produces a tidy data that contains the relevent manipulations and
+summaries. The steps taken by the script are as follows:
+
+1. Load libraries (data.table)
+2. Download the HAR dataset 
+3. Unzip Human Activity Recognition dataset 
+4. Read and merge X_test and X-train data
+5. Read features.txt and set the labels as the new merged X data column names
+6. Identify and extract the mean and standard deviation features from the X data
+7. Read and merge y_test and y_train data
+8. Read in activity labels and add it as a new column in the y data (for each row)
+9. Read and Merge subject data and give descriptive column name ("Subject_ID")
+10. Merge all data into a single dataset, reshape dataset
+11. Write the dataset to a text file ("tidy_dataset.txt")
+
 ### Good Luck and Have a Nice Day
 
 
